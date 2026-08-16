@@ -6,6 +6,7 @@ import LanguagePrograms from './components/LanguagePrograms'
 import TechPrograms from './components/TechPrograms'
 import Opportunities from './components/Opportunities'
 import Team from './components/Team'
+import Contact from './components/Contact'
 import Footer from './components/Footer'
 import './App.css'
 
@@ -20,6 +21,7 @@ function App() {
         <TechPrograms />
         <Team />
         <Opportunities />
+        <Contact />
       </main>
       <Footer />
     </div>
