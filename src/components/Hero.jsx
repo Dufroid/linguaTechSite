@@ -22,8 +22,8 @@ const Hero = () => {
           </p>
           <div className="hero-actions">
             <a href="#languages" className="btn btn-primary btn-lg">Explorer les programmes</a>
-            <a href="#accueil" className="btn btn-outline btn-lg flex-center">
-              Accueil <ArrowRight size={20} style={{ marginLeft: '8px' }} />
+            <a href="#contact" className="btn btn-outline btn-lg flex-center">
+              Prendre rendez-vous <ArrowRight size={20} style={{ marginLeft: '8px' }} />
             </a>
           </div>
         </div>

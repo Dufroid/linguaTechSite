@@ -8,7 +8,7 @@ const teamMembers = [
     name: "Sorel Tshibangu",
     role: "Fondateur & PDG",
     description: "Devellopeur logiciel et Entrepreneur technologique de la RDC, Connu pour travailler sur des projets numeriques liés à l'éducation, aux langue, aux communautés et à la transformation digital.",
-    image: "/team/picture5.jpg",
+    image: "./team/picture5.jpg",
     social: { linkedin: "#", twitter: "#", email: "#" }
   },
   {
@@ -24,7 +24,7 @@ const teamMembers = [
     name: "Danny Makongo",
     role: "Développeur Principal",
     description: "ingenieur En informatique, Un Entrepreneur et Expert En Langue et , Grâce à son esprit entrepreneurial, il met en place des plateformes, applications ou services digitaux visant à faciliter la communication, l’éducation, le commerce et l’accès à l’information. Son objectif est de contribuer au développement de la communauté.",
-    image: "/team/picture6.jpg",
+    image: "./team/picture6.jpg",
     social: { linkedin: "#", twitter: "#", email: "#" }
   }
 ];

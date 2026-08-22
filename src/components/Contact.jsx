@@ -4,6 +4,7 @@ import './Contact.css';
 
 const Contact = () => {
   const [service, setService] = useState("");
+ 
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -29,14 +30,14 @@ const Contact = () => {
   return (
     <section id="contact" className="section contact-section">
       <div className="container">
-        <h2 className="section-title">Contactez-nous & Postulez</h2>
+        <h2 className="section-title">Prendre Rendez-vous</h2>
         <p className="section-subtitle">
-          Remplissez le formulaire ci-dessous pour postuler ou nous contacter directement.
+          Remplissez le formulaire ci-dessous pour prendre un rendez-vous ou nous contacter directement.
         </p>
         
         <div className="contact-container">
           <div className="contact-form-wrapper">
-            <h3>Envoyez-nous un message</h3>
+            <h3>Prendre un rendez-vous ou nous contacter</h3>
             <form ref={form} className="contact-form" onSubmit={sendEmail}>
               
               <div className="form-row">
@@ -67,9 +68,9 @@ const Contact = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="service">Type de demande *</label>
+                <label htmlFor="service">Type de rendez-vous *</label>
                 <select id="service" name="service" value={service} onChange={(e) => setService(e.target.value)} required>
-                  <option value="" disabled>Sélectionnez un service...</option>
+                  <option value="" disabled>Sélectionnez le type de rendez-vous...</option>
                   <option value="inscription à une formation">Inscription à une formation</option>
                   <option value="demande d'information">Demande d'information</option>
                   <option value="formation en entreprise">Formation en entreprise</option>
@@ -78,7 +79,7 @@ const Contact = () => {
                   <option value="developpement web/mobile">Développement web/mobile</option>
                   <option value="intelligence artificielle">Intelligence artificielle</option>
                   <option value="Marketing digitl">Marketing digital</option>
-                  <option value="langues">Langues</option>
+                  <option value="stage">Stage professionnel ou académique</option>
                   <option value="design graphique">Design graphique</option>
                   <option value="autre">Autre...</option>
                 </select>
@@ -94,8 +95,14 @@ const Contact = () => {
 
               {(service === "inscription à une formation" || service === "langues") && (
                 <div className="form-group dynamic-field">
-                  <label htmlFor="level">Niveau actuel</label>
-                  <input type="text" id="level" name="level" placeholder="Ex: Débutant, Intermédiaire, etc." />
+                  <label htmlFor="level">Type de la formation</label>
+                 
+                  <select id="service" name="service" value={service} onChange={(e) => setService(e.target.value)} required>
+                  <option value="" disabled>Type de formation</option>
+                   <option value="Langues étrangères">Langues étrangères</option>
+                  <option value="Technologies">Technologies</option>
+                  <option value="Autres">Autres...</option>
+                   </select>
                 </div>
               )}
               
@@ -130,7 +137,7 @@ const Contact = () => {
               </div>
 
               <div className="form-actions">
-                <button type="submit" className="btn btn-primary btn-submit">Soumettre la demande</button>
+                <button type="submit" className="btn btn-primary btn-submit">Prendre rendez-vous</button>
                 <a 
                   href="https://wa.me/243815861285" 
                   target="_blank" 
@@ -138,7 +145,7 @@ const Contact = () => {
                   className="btn btn-whatsapp"
                 >
                   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="whatsapp-icon" />
-                  Discuter avec nous sur WhatsApp
+                  Contacter nous sur WhatsApp
                 </a>
               </div>
             </form>

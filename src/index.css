@@ -90,13 +90,13 @@ img {
 .btn-primary {
   background-color: var(--secondary);
   color: var(--text-light);
-  box-shadow: 0 4px 6px -1px rgba(249, 115, 22, 0.4);
+  box-shadow: 0 4px 6px -1px rgb(rgb(189, 187, 187), rgb(189, 187, 187), rgb(189, 187, 187)) ;
 }
 
 .btn-primary:hover {
-  background-color: #ea580c;
+  background-color: var(--secondary-light);
   transform: translateY(-2px);
-  box-shadow: 0 6px 10px -1px rgba(249, 115, 22, 0.5);
+  box-shadow: 0 6px 10px -1px var(--secondary-light);
 }
 
 .btn-outline {
