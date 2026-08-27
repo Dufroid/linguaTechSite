@@ -6,24 +6,24 @@ const teamMembers = [
   {
     id: 1,
     name: "Sorel Tshibangu",
-    role: "Fondateur & PDG",
-    description: "Devellopeur logiciel et Entrepreneur technologique de la RDC, Connu pour travailler sur des projets numeriques liés à l'éducation, aux langue, aux communautés et à la transformation digital.",
+    role: "Fondateur & CEO",
+    description: "Entrepreneur technologique Congolais,Concepteur et developpeur de solutions numerique, Connu pour travailler sur des projets numeriques liés à l'éducation, aux langues , aux communautés et à la transformation digital des entreprises.",
     image: "./team/picture5.jpg",
-    social: { linkedin: "#", twitter: "#", email: "#" }
+    social: { linkedin: "#", twitter: "#", email: "soreltshibangu1@gmail.com" }
   },
   {
     id: 2,
-    name: "Marie Curie",
+    name: "Joseph Kniga",
     role: "Responsable Pédagogique",
-    description: "Experte en linguistique, Marie s'assure que nos programmes linguistiques sont à la pointe de l'innovation.",
+    description: "Expert en enseignement de langues étrangères,polygotte,etenteur d'un master en droit des affaires.Joseph s'assure que nos programmes linguistiques restent  à la pointe de l'innovation.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     social: { linkedin: "#", twitter: "#", email: "#" }
   },
   {
     id: 3,
     name: "Danny Makongo",
-    role: "Développeur Principal",
-    description: "ingenieur En informatique, Un Entrepreneur et Expert En Langue et , Grâce à son esprit entrepreneurial, il met en place des plateformes, applications ou services digitaux visant à faciliter la communication, l’éducation, le commerce et l’accès à l’information. Son objectif est de contribuer au développement de la communauté.",
+    role: "Développeur des solutions digitales",
+    description: "Ingenieur En informatique.Il parle correctement l'Anglais et l'Espagnol. Son objectif est de contribuer au développement de la communauté.",
     image: "./team/picture6.jpg",
     social: { linkedin: "#", twitter: "#", email: "#" }
   }
@@ -46,7 +46,7 @@ const Team = () => {
                 <div className="team-social">
                   <a href={member.social.linkedin} className="team-social-link"><Linkedin size={18} /></a>
                   <a href={member.social.twitter} className="team-social-link"><Twitter size={18} /></a>
-                  <a href={member.social.email} className="team-social-link"><Mail size={18} /></a>
+                  <a href={member.social.email}   className="team-social-link"><Mail size={18} /></a>
                 </div>
               </div>
               <div className="team-info">

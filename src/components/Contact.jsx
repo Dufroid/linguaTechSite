@@ -126,7 +126,7 @@ const Contact = () => {
 
               <div className="form-group">
                 <label htmlFor="message">Message ou détails complémentaires *</label>
-                <textarea id="message" name="message" rows="4" placeholder="Votre message..." required></textarea>
+                <textarea  id="message" name="message" rows="4" placeholder="Votre message..." required ></textarea>
               </div>
 
               <div className="form-group checkbox-group">
