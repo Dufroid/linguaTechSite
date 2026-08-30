@@ -1,0 +1,251 @@
+/* Booking Container & Stepper */
+.booking-wizard {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  max-width: 850px;
+  margin: 0 auto;
+  border: 1px solid #e2e8f0;
+}
+
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.stepper::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #e2e8f0;
+  z-index: 1;
+}
+
+.step-item {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.step-number {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #cbd5e1;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.step-item.active .step-number {
+  border-color: #2d87ee;
+  background: #2d87ee;
+  color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(45, 135, 238, 0.2);
+}
+
+.step-item.completed .step-number {
+  border-color: #10b981;
+  background: #10b981;
+  color: #ffffff;
+}
+
+.step-label {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #64748b;
+  text-align: center;
+}
+
+.step-item.active .step-label {
+  color: #2d87ee;
+}
+
+/* Step 1: Calendar Grid */
+.calendar-section h3,
+.slot-section h3,
+.form-section h3 {
+  font-size: 1.35rem;
+  color: #1e293b;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.date-card {
+  padding: 1.2rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  background: #f8fafc;
+  transition: all 0.25s ease;
+}
+
+.date-card:hover:not(.disabled) {
+  border-color: #2d87ee;
+  transform: translateY(-2px);
+  background: #eff6ff;
+}
+
+.date-card.selected {
+  border-color: #2d87ee;
+  background: #2d87ee;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(45, 135, 238, 0.3);
+}
+
+.date-card.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: #f1f5f9;
+}
+
+.date-card .day-name {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.date-card .day-number {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0.2rem 0;
+}
+
+.date-card .month-year {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+/* Step 2: Time Slots */
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.slot-btn {
+  padding: 0.9rem 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.slot-btn:hover:not(:disabled) {
+  border-color: #2d87ee;
+  color: #2d87ee;
+  background: #eff6ff;
+}
+
+.slot-btn.selected {
+  border-color: #2d87ee;
+  background: #2d87ee;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(45, 135, 238, 0.25);
+}
+
+.slot-btn:disabled {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+  color: #94a3b8;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+/* Step 3 & 4 Controls */
+.wizard-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.btn-secondary {
+  background: #e2e8f0;
+  color: #475569;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #cbd5e1;
+}
+
+.booking-success-card {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.success-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  background: #d1fae5;
+  color: #10b981;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.summary-box {
+  background: #f8fafc;
+  border-left: 4px solid #2d87ee;
+  padding: 1.25rem;
+  border-radius: 8px;
+  text-align: left;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 640px) {
+  .booking-wizard {
+    padding: 1.5rem 1rem;
+  }
+  .step-label {
+    display: none;
+  }
+  .calendar-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
