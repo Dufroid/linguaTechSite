@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import { Lock, Mail, ShieldAlert } from 'lucide-react';
 import './Admin.css';
@@ -79,10 +79,16 @@ const AdminLogin = () => {
           </button>
         </form>
 
-        <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
-          <a href="/" style={{ color: '#2d87ee', fontSize: '0.85rem', fontWeight: 600 }}>
+        <div style={{ textAlign: 'center', marginTop: '1.5rem', borderTop: '1px solid #f1f5f9', paddingTop: '1.25rem' }}>
+          <p style={{ color: '#64748b', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Pas encore de compte ?</p>
+          <Link to="/admin/setup" style={{ color: '#2d87ee', fontSize: '0.9rem', fontWeight: 700 }}>
+            → Créer un compte administrateur
+          </Link>
+        </div>
+        <div style={{ textAlign: 'center', marginTop: '0.75rem' }}>
+          <Link to="/" style={{ color: '#94a3b8', fontSize: '0.82rem' }}>
             ← Retour au site LinguaTech
-          </a>
+          </Link>
         </div>
       </div>
     </div>

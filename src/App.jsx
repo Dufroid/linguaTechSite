@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 // Pages
 import BookAppointment from './pages/BookAppointment';
 import AdminLogin from './pages/AdminLogin';
+import AdminSetup from './pages/AdminSetup';
 import AdminDashboard from './pages/AdminDashboard';
 import ManageAvailability from './pages/ManageAvailability';
 import Appointments from './pages/Appointments';
@@ -48,6 +49,7 @@ function App() {
       <Route path="/appointment" element={<BookAppointment />} />
 
       {/* Admin Portal Routes */}
+      <Route path="/admin/setup" element={<AdminSetup />} />
       <Route path="/admin/login" element={<AdminLogin />} />
       <Route
         path="/admin/dashboard"
